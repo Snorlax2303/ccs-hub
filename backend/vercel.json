@@ -2,10 +2,13 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/index.js",
-      "use": "@vercel/node"
+      "src": "package.json",
+      "use": "@vercel/node@2.15.10"
     }
   ],
+  "env": {
+    "NODE_ENV": "production"
+  },
   "routes": [
     {
       "src": "/(.*)",
