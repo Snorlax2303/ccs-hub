@@ -66,8 +66,15 @@ app.post('/api/pedidos', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`\n🚀 Backend: http://localhost:${PORT}`);
   console.log(`📊 Health: http://localhost:${PORT}/health`);
   console.log(`🧪 Test DB: http://localhost:${PORT}/api/test-db\n`);
+}).on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.error(`❌ Porta ${PORT} em uso!`);
+    console.error(`Use: BACKEND_PORT=3002 npm run dev`);
+    process.exit(1);
+  }
+  throw err;
 });
