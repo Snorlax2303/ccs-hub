@@ -5,7 +5,7 @@
 Sua API key está configurada:
 
 ```
-DEEPSEEK_API_KEY=sk-3660c37eb06448fdb52d88eeda2cb58f
+DEEPSEEK_API_KEY=sk-your-api-key-here
 ```
 
 ## 1️⃣ Verificar Crédito
@@ -20,7 +20,7 @@ DEEPSEEK_API_KEY=sk-3660c37eb06448fdb52d88eeda2cb58f
 A key já está no .env.example:
 
 ```env
-DEEPSEEK_API_KEY=sk-3660c37eb06448fdb52d88eeda2cb58f
+DEEPSEEK_API_KEY=sk-your-api-key-here
 DEEPSEEK_MODEL=deepseek-chat
 ```
 
